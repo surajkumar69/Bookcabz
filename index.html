@@ -118,7 +118,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
                 <!-- Hero Content -->
-                <div class="text-white">
+                <div class="text-white order-1 lg:order-2">
                     <span class="inline-block py-1 px-3 rounded-full bg-brand/20 text-brand border border-brand/30 text-sm font-semibold mb-6">
                         Premium Cab Service in Bengaluru
                     </span>
@@ -140,7 +140,7 @@
                 </div>
 
                 <!-- Booking Widget -->
-                <div class="bg-white rounded-2xl shadow-xl p-5 md:p-6 w-full max-w-md lg:ml-auto border border-gray-100 text-dark">
+                <div class="bg-white rounded-2xl shadow-xl p-5 md:p-6 w-full max-w-md lg:mr-auto border border-gray-100 text-dark order-2 lg:order-1">
                     <form onsubmit="handleShubhamSearch(event)" class="space-y-4">
                         <!-- Trip Type -->
                         <div class="flex gap-2">
@@ -168,7 +168,7 @@
                         <div class="relative flex flex-col gap-3">
                             <div class="border-b border-gray-200 pb-2">
                                 <label class="block text-xs font-bold text-gray-500 mb-1">FROM</label>
-                                <input type="text" id="s_from" placeholder="e.g. Ahmedabad" required class="w-full text-lg font-semibold outline-none placeholder-gray-400">
+                                <input type="text" id="s_from" placeholder="e.g. Bangalore" required class="w-full text-lg font-semibold outline-none placeholder-gray-400">
                             </div>
                             
                             <button type="button" onclick="swapShubham()" class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition shadow-sm z-10">
@@ -177,7 +177,7 @@
 
                             <div class="pt-2">
                                 <label class="block text-xs font-bold text-gray-500 mb-1">TO</label>
-                                <input type="text" id="s_to" placeholder="e.g. Mumbai" required class="w-full text-lg font-semibold outline-none placeholder-gray-400">
+                                <input type="text" id="s_to" placeholder="e.g. Chennai" required class="w-full text-lg font-semibold outline-none placeholder-gray-400">
                             </div>
                         </div>
                         
@@ -187,11 +187,11 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">START DATE</label>
-                                <input type="text" id="s_date" placeholder="DD/MM/YYYY" required class="w-full font-semibold outline-none text-gray-800" onfocus="(this.type='date')" onblur="(this.type='text')">
+                                <input type="text" id="s_date" placeholder="DD/MM/YYYY" required class="w-full font-semibold outline-none text-gray-800 cursor-pointer" onfocus="this.type='date'; try{this.showPicker()}catch(e){}" onclick="try{this.showPicker()}catch(e){}" onblur="if(!this.value) this.type='text'">
                             </div>
                             <div class="border-l border-gray-200 pl-4">
                                 <label class="block text-xs font-bold text-gray-500 mb-1">START TIME</label>
-                                <input type="time" id="s_time" required class="w-full font-semibold outline-none text-gray-800">
+                                <input type="time" id="s_time" required class="w-full font-semibold outline-none text-gray-800 cursor-pointer" onclick="try{this.showPicker()}catch(e){}">
                             </div>
                         </div>
 
@@ -199,11 +199,11 @@
                         <div id="shubham_return_fields" class="grid grid-cols-2 gap-4 hidden border-t border-gray-100 pt-3">
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">RETURN DATE</label>
-                                <input type="text" id="s_return_date" placeholder="DD/MM/YYYY" class="w-full font-semibold outline-none text-gray-800" onfocus="(this.type='date')" onblur="(this.type='text')">
+                                <input type="text" id="s_return_date" placeholder="DD/MM/YYYY" class="w-full font-semibold outline-none text-gray-800 cursor-pointer" onfocus="this.type='date'; try{this.showPicker()}catch(e){}" onclick="try{this.showPicker()}catch(e){}" onblur="if(!this.value) this.type='text'">
                             </div>
                             <div class="border-l border-gray-200 pl-4">
                                 <label class="block text-xs font-bold text-gray-500 mb-1">RETURN TIME</label>
-                                <input type="time" id="s_return_time" class="w-full font-semibold outline-none text-gray-800">
+                                <input type="time" id="s_return_time" class="w-full font-semibold outline-none text-gray-800 cursor-pointer" onclick="try{this.showPicker()}catch(e){}">
                             </div>
                         </div>
 
