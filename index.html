@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cabz | Reliable Cabs in Bengaluru</title>
+    <meta name="description" content="Reliable one way, drop taxi, outstation & inter city cab services in Bengaluru. Book your comfortable journey with Book Cabz today.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fef3c7',
+                            DEFAULT: '#f59e0b', // Amber 500
+                            dark: '#d97706',
+                        },
+                        dark: '#111827'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.8)), url('assets/images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .outstation-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.9)), url('assets/images/outstation_highway.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bengaluru-bg {
+            background-image: linear-gradient(rgba(245, 158, 11, 0.9), rgba(217, 119, 6, 0.9)), url('assets/images/bengaluru_city.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Mobile Sticky CTA Padding */
+        body { padding-bottom: 70px; }
+        @media (min-width: 768px) { body { padding-bottom: 0; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-dark text-white text-sm py-2 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="mailto:bookcabzbookings@gmail.com" class="hover:text-brand transition"><i class="fas fa-envelope mr-2 text-brand"></i>bookcabzbookings@gmail.com</a>
+                <a href="tel:9666576797" class="hover:text-brand transition"><i class="fas fa-phone mr-2 text-brand"></i>+91 96665 76797</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-gray-300">24/7 Premium Cab Service</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="assets/images/logo.png" alt="Book Cabz Logo" class="h-12 md:h-16 w-auto object-contain mix-blend-multiply">
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#home" class="text-gray-700 hover:text-brand transition">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-brand transition">Services</a>
+                <a href="#fleet" class="text-gray-700 hover:text-brand transition">Our Fleet</a>
+                <a href="#why-us" class="text-gray-700 hover:text-brand transition">Why Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-brand transition">Contact</a>
+                <a href="tel:9666576797" class="bg-brand text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-brand-dark transition shadow-lg shadow-brand/30">
+                    <i class="fas fa-phone mr-2"></i> 96665 76797
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl text-dark" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="flex flex-col px-4 py-2">
+                <a href="#home" class="py-3 border-b border-gray-50 font-medium text-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+                <a href="#services" class="py-3 border-b border-gray-50 font-medium text-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+                <a href="#fleet" class="py-3 border-b border-gray-50 font-medium text-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Our Fleet</a>
+                <a href="#contact" class="py-3 font-medium text-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[90vh] flex items-center pt-10 pb-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="text-white">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand/20 text-brand border border-brand/30 text-sm font-semibold mb-6">
+                        Premium Cab Service in Bengaluru
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Reliable Cabs.<br>Comfortable Journeys.<br><span class="text-brand">Book with Confidence.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+                        One Way, Drop Taxi, Outstation & Inter City Cab Services tailored for your safety and comfort.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#book" class="bg-brand text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-dark transition shadow-lg shadow-brand/30 flex items-center text-lg">
+                            <i class="fas fa-calendar-check mr-2"></i> Book a Cab
+                        </a>
+                        <a href="https://wa.me/919666576797" class="bg-green-500 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-green-600 transition shadow-lg shadow-green-500/30 flex items-center text-lg">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booking Widget -->
+                <div id="book" class="glass-card rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20 relative z-10 lg:ml-auto w-full max-w-md">
+                    <h3 class="text-2xl font-bold text-dark mb-6 border-b pb-4">Book Your Ride</h3>
+                    <form action="https://wa.me/919666576797" method="get" class="space-y-4" onsubmit="event.preventDefault(); window.open('https://wa.me/919666576797?text=Hi Book Cabz! I want to book a cab. From: ' + document.getElementById('pickup').value + ' To: ' + document.getElementById('drop').value + ' Date: ' + document.getElementById('date').value, '_blank');">
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Pickup Location</label>
+                            <div class="relative">
+                                <i class="fas fa-map-marker-alt absolute left-3 top-3 text-brand"></i>
+                                <input type="text" id="pickup" placeholder="Enter Pickup Location" class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Drop Location</label>
+                            <div class="relative">
+                                <i class="fas fa-location-dot absolute left-3 top-3 text-red-500"></i>
+                                <input type="text" id="drop" placeholder="Enter Drop Location" class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Travel Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                                <input type="time" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Cab Type</label>
+                            <select class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition">
+                                <option>Sedan (Dzire/Etios)</option>
+                                <option>SUV (Ertiga/Carens)</option>
+                                <option>Premium SUV (Innova/Crysta)</option>
+                                <option>Tempo Traveller</option>
+                                <option>Urbania Luxury Van</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-dark text-white py-3.5 rounded-lg font-bold text-lg hover:bg-black transition shadow-lg mt-2">
+                            Book Now
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand font-bold uppercase tracking-wider text-sm mb-2">Our Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark">Comprehensive Travel Solutions</h3>
+                <div class="w-20 h-1 bg-brand mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative">
+                        <img src="assets/images/service_oneway.jpg" alt="One Way Cabs" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h4 class="absolute bottom-4 left-6 text-white text-xl font-bold">One Way Cabs</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Affordable one-way cab services with comfortable and reliable vehicles. Pay only for the distance you travel.</p>
+                        <a href="tel:9666576797" class="text-brand font-semibold flex items-center hover:text-brand-dark transition">
+                            Book Service <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative">
+                        <img src="assets/images/service_droptaxi.jpg" alt="Drop Taxi" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h4 class="absolute bottom-4 left-6 text-white text-xl font-bold">Drop Taxi</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Convenient point-to-point drop taxi service for hassle-free travel. Perfect for airport drops and daily commutes.</p>
+                        <a href="tel:9666576797" class="text-brand font-semibold flex items-center hover:text-brand-dark transition">
+                            Book Service <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative">
+                        <img src="assets/images/service_outstation.jpg" alt="Outstation Cabs" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h4 class="absolute bottom-4 left-6 text-white text-xl font-bold">Outstation Cabs</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Comfortable and reliable cabs for long-distance and outstation journeys. Travel with your family safely.</p>
+                        <a href="tel:9666576797" class="text-brand font-semibold flex items-center hover:text-brand-dark transition">
+                            Book Service <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative">
+                        <img src="assets/images/service_intercity.jpg" alt="Inter City Cabs" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h4 class="absolute bottom-4 left-6 text-white text-xl font-bold">Inter City Cabs</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Easy and comfortable travel between cities with our premium professional cab service. Punctual and safe.</p>
+                        <a href="tel:9666576797" class="text-brand font-semibold flex items-center hover:text-brand-dark transition">
+                            Book Service <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outstation Section (Visually Rich) -->
+    <section class="outstation-bg py-24 relative">
+        <!-- Temporary inline style for background if local image is missing -->
+        <div class="absolute inset-0 bg-gray-900/80 -z-10" style="background-image: url('assets/images/service_outstation.jpg'); background-size: cover; mix-blend-mode: overlay;"></div>
+        
+        <div class="container mx-auto px-4 z-10 relative">
+            <div class="max-w-3xl text-white">
+                <h2 class="text-brand font-bold tracking-wider mb-2">EXPLORE INDIA</h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-6">Comfortable Outstation Travel</h3>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed">
+                    Experience the joy of road trips without the fatigue of driving. Our premium outstation cabs offer the perfect blend of comfort, safety, and reliability for all your long-distance journeys.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand/20 flex items-center justify-center text-brand">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <span class="font-medium text-lg">One-way Trips</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand/20 flex items-center justify-center text-brand">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <span class="font-medium text-lg">Round Trips</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand/20 flex items-center justify-center text-brand">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <span class="font-medium text-lg">Inter-city Travel</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand/20 flex items-center justify-center text-brand">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="font-medium text-lg">Family Trips</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand/20 flex items-center justify-center text-brand">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <span class="font-medium text-lg">Business Travel</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand/20 flex items-center justify-center text-brand">
+                            <i class="fas fa-plane-arrival"></i>
+                        </div>
+                        <span class="font-medium text-lg">Airport Transfers</span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/919666576797?text=Hi, I want to book an outstation cab." class="inline-block bg-white text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+                    Plan Your Outstation Trip
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand font-bold uppercase tracking-wider text-sm mb-2">Our Fleet</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark">Choose the right vehicle for your journey</h3>
+                <div class="w-20 h-1 bg-brand mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Sedan -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_sedan.jpg" alt="Premium Sedan" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-dark text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Sedan AC</h4>
+                        <p class="text-gray-500 text-sm mb-4">Etios, Dzire or Equivalent</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 4 Passengers
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-suitcase w-5 text-gray-400"></i> 2 Bags
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ertiga -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_ertiga.jpg" alt="Ertiga" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Ertiga</h4>
+                        <p class="text-gray-500 text-sm mb-4">Standard MPV</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 6 Passengers
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-suitcase w-5 text-gray-400"></i> 3 Bags
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carens -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_carens.jpg" alt="Kia Carens" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Kia Carens</h4>
+                        <p class="text-gray-500 text-sm mb-4">Comfort MPV</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 6 Passengers
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-suitcase w-5 text-gray-400"></i> 3 Bags
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Innova -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_innova.jpg" alt="Innova" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Innova</h4>
+                        <p class="text-gray-500 text-sm mb-4">Premium SUV</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 7 Passengers
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-suitcase w-5 text-gray-400"></i> 4 Bags
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Innova Crysta -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_crysta.jpg" alt="Innova Crysta" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">PREMIUM</div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Innova Crysta</h4>
+                        <p class="text-gray-500 text-sm mb-4">Luxury SUV</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 7 Passengers
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-suitcase w-5 text-gray-400"></i> 4 Bags
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tempo Traveller -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_tempo.jpg" alt="Tempo Traveller" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Tempo Traveller</h4>
+                        <p class="text-gray-500 text-sm mb-4">Group Travel Van</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 12-14 Pax
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-suitcase w-5 text-gray-400"></i> Ample Space
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Urbania -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover shadow-lg border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="assets/images/fleet_urbania.jpg" alt="Force Urbania" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-dark text-brand font-bold text-xs px-3 py-1 rounded-full border border-brand">ULTRA LUXURY</div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Urbania</h4>
+                        <p class="text-gray-500 text-sm mb-4">Luxury Group Travel</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-users w-5 text-gray-400"></i> 10-17 Pax
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-snowflake w-5 text-blue-400"></i> AC
+                            </div>
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-couch w-5 text-gray-400"></i> Recliners
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto flex gap-2">
+                            <a href="tel:9666576797" class="flex-1 text-center border-2 border-dark text-dark py-2.5 rounded-lg font-bold hover:bg-dark hover:text-white transition">Call</a>
+                            <a href="https://wa.me/919666576797" class="flex-1 text-center bg-brand text-white py-2.5 rounded-lg font-bold hover:bg-brand-dark transition shadow-md">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bengaluru Cab Service Section -->
+    <section class="py-20 relative bg-dark text-white bengaluru-bg">
+        <div class="absolute inset-0 bg-dark/80" style="background-image: url('assets/images/hero.jpg'); background-size: cover; mix-blend-mode: overlay;"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="max-w-2xl mb-10 md:mb-0">
+                    <h2 class="text-brand font-bold tracking-wider mb-2 text-sm uppercase">Namma Bengaluru</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold mb-6">Premium Cab Services Across Bengaluru</h3>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        Whether you're heading to Kempegowda International Airport, navigating through Electronic City traffic, or planning a weekend getaway from Bengaluru, Book Cabz ensures a smooth, timely, and comfortable ride. We cover all major localities and nearby destinations.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check-circle text-brand mr-3"></i> Prompt Airport Transfers (KIAL)</li>
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check-circle text-brand mr-3"></i> Corporate Travel Solutions</li>
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check-circle text-brand mr-3"></i> Weekend Getaways from Bengaluru</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-auto">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl text-center max-w-sm mx-auto">
+                        <i class="fas fa-headset text-5xl text-brand mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Need a cab right now?</h4>
+                        <p class="text-sm text-gray-300 mb-6">Our fleet is stationed across Bengaluru for quick dispatch.</p>
+                        <a href="tel:9666576797" class="block w-full bg-brand text-dark font-bold py-3 rounded-lg hover:bg-white transition">
+                            <i class="fas fa-phone mr-2"></i> Call 9666576797
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand font-bold uppercase tracking-wider text-sm mb-2">Why Book Cabz</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark">Experience the Best in Travel</h3>
+                <div class="w-20 h-1 bg-brand mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-6 transform rotate-3 hover:rotate-0 transition duration-300">
+                        <i class="fas fa-shield-alt text-4xl text-brand-dark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Reliable Service</h4>
+                    <p class="text-gray-600">Punctuality is our priority. We ensure your cab arrives on time, every time.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-6 transform -rotate-3 hover:rotate-0 transition duration-300">
+                        <i class="fas fa-car-sparkles text-4xl text-brand-dark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Clean & Comfortable Cars</h4>
+                    <p class="text-gray-600">Well-maintained, thoroughly sanitized, and air-conditioned vehicles for your comfort.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-6 transform rotate-3 hover:rotate-0 transition duration-300">
+                        <i class="fas fa-user-tie text-4xl text-brand-dark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Professional Drivers</h4>
+                    <p class="text-gray-600">Experienced, verified, and courteous drivers who know the routes perfectly.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-6 transform -rotate-3 hover:rotate-0 transition duration-300">
+                        <i class="fas fa-tags text-4xl text-brand-dark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Transparent Pricing</h4>
+                    <p class="text-gray-600">No hidden charges. Clear, competitive, and affordable pricing models.</p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-6 transform rotate-3 hover:rotate-0 transition duration-300">
+                        <i class="fas fa-mobile-screen text-4xl text-brand-dark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Easy Booking</h4>
+                    <p class="text-gray-600">Book seamlessly via Call, WhatsApp, or through our quick online form.</p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-6 transform -rotate-3 hover:rotate-0 transition duration-300">
+                        <i class="fas fa-headset text-4xl text-brand-dark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">24/7 Customer Support</h4>
+                    <p class="text-gray-600">Round-the-clock assistance to ensure a smooth and hassle-free travel experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-brand">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-dark mb-4">Ready to Book Your Cab?</h2>
+            <p class="text-xl text-dark/80 font-medium mb-10">"Travel comfortably with Book Cabz."</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="#book" class="w-full md:w-auto bg-dark text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-black transition shadow-lg">
+                    Book Now
+                </a>
+                <a href="tel:9666576797" class="w-full md:w-auto bg-white text-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg flex items-center justify-center border-2 border-transparent">
+                    <i class="fas fa-phone mr-2"></i> Call 96665 76797
+                </a>
+                <a href="https://wa.me/919666576797" class="w-full md:w-auto bg-green-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-600 transition shadow-lg flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-10 text-lg">We are here to assist you. Contact us for bookings, inquiries, or any travel-related assistance.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center text-brand text-xl shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-dark">Address</h4>
+                                <p class="text-gray-600 leading-relaxed mt-1">
+                                    44, 1st Floor, 10th Cross, Devarachikkanahalli Main Rd,<br>
+                                    Opp. CSB Bank, Near Golden Park Apartments,<br>
+                                    Maruthi Layout, Hongasandra, Bengaluru,<br>
+                                    Karnataka 560076
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center text-brand text-xl shrink-0 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-dark">Phone</h4>
+                                <a href="tel:9666576797" class="text-gray-600 hover:text-brand transition block mt-1 text-lg font-medium">96665 76797</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center text-brand text-xl shrink-0 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-dark">Email</h4>
+                                <a href="mailto:bookcabzbookings@gmail.com" class="text-gray-600 hover:text-brand transition block mt-1">bookcabzbookings@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Placeholder -->
+                <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-lg h-96 relative border border-gray-100">
+                    <!-- Embed actual iframe here. Used a styled placeholder for aesthetics -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.378930491845!2d77.616954!3d12.883344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15004753047d%3A0x6424e8e19c32d431!2sDevarachikkanahalli%20Main%20Rd%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-brand">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="inline-flex items-center mb-6 bg-white p-2 rounded-xl">
+                        <img src="assets/images/logo.png" alt="Book Cabz Logo" class="h-16 w-auto object-contain">
+                    </a>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Your trusted partner for safe, comfortable, and reliable cab services across Bengaluru and beyond. Travel with peace of mind.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand hover:text-dark transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand hover:text-dark transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand hover:text-dark transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-b border-gray-700 pb-2">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> One Way Cabs</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Drop Taxi</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Outstation Cabs</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Inter City Cabs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-b border-gray-700 pb-2">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Services</a></li>
+                        <li><a href="#fleet" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Fleet</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-brand transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Contact Us</a></li>
+                        <li><a href="#book" class="text-brand font-semibold hover:text-white transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Book a Cab</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-b border-gray-700 pb-2">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 text-brand mr-3"></i>
+                            <a href="tel:9666576797" class="text-gray-400 hover:text-brand transition font-semibold">96665 76797</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 text-brand mr-3"></i>
+                            <a href="mailto:bookcabzbookings@gmail.com" class="text-gray-400 hover:text-brand transition">bookcabzbookings@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 text-brand mr-3"></i>
+                            <span class="text-gray-400 text-sm">44, 1st Floor, 10th Cross, Devarachikkanahalli Main Rd, Bengaluru, 560076</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Book Cabz. All Rights Reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-brand transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom CTA -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-[0_-5px_15px_rgba(0,0,0,0.1)] z-50 flex border-t border-gray-200 pb-safe">
+        <a href="tel:9666576797" class="flex-1 py-4 text-center text-dark font-bold border-r border-gray-200 flex flex-col items-center justify-center bg-gray-50 active:bg-gray-100">
+            <i class="fas fa-phone mb-1 text-lg"></i>
+            <span class="text-xs">Call</span>
+        </a>
+        <a href="https://wa.me/919666576797" class="flex-1 py-4 text-center text-green-600 font-bold border-r border-gray-200 flex flex-col items-center justify-center bg-green-50 active:bg-green-100">
+            <i class="fab fa-whatsapp mb-1 text-lg"></i>
+            <span class="text-xs">WhatsApp</span>
+        </a>
+        <a href="#book" class="flex-1 py-4 text-center text-white bg-brand font-bold flex flex-col items-center justify-center active:bg-brand-dark">
+            <i class="fas fa-taxi mb-1 text-lg"></i>
+            <span class="text-xs">Book</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky Navbar effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
